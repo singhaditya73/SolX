@@ -22,10 +22,23 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <div className="min-h-screen bg-gray-950">
+          <div className="min-h-screen relative">
             <Navbar />
             {children}
-            <Toaster theme="dark" position="top-right" richColors closeButton />
+            <Toaster
+              theme="dark"
+              position="top-right"
+              richColors
+              closeButton
+              toastOptions={{
+                style: {
+                  background: "rgba(26, 26, 46, 0.95)",
+                  border: "1px solid rgba(0, 255, 225, 0.3)",
+                  color: "#f1f1f1",
+                  backdropFilter: "blur(10px)",
+                },
+              }}
+            />
           </div>
         </ThemeProvider>
       </body>

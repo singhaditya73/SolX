@@ -20,14 +20,14 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 backdrop-blur-lg bg-black/70 border-b border-gray-800"
+      className="sticky top-0 z-50 space-nav"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <div className="h-8 w-8 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full mr-2"></div>
-              <span className="font-bold text-xl">Solana DApp</span>
+              <div className="h-8 w-8 bg-gradient-to-r from-neon-aqua to-neon-purple rounded-full mr-2 neon-glow"></div>
+              <span className="font-bold text-xl text-soft-white">Solana DApp</span>
             </Link>
             <div className="hidden md:ml-10 md:flex md:space-x-8">
               <NavLink href="/" active={isActive("/")}>
@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-muted-gray hover:text-neon-aqua hover:bg-gray-700/50 focus:outline-none transition-colors"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -64,7 +64,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-black/90 backdrop-blur-lg"
+          className="md:hidden space-nav"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <MobileNavLink href="/" active={isActive("/")}>
@@ -77,7 +77,7 @@ export default function Navbar() {
               Token Launchpad
             </MobileNavLink>
           </div>
-          <div className="pt-4 pb-3 border-t border-gray-700">
+          <div className="pt-4 pb-3 border-t border-neon-aqua/20">
             <div className="px-2">
               <WalletConnect buttonVariant="mobile" />
             </div>
@@ -88,14 +88,14 @@ export default function Navbar() {
   )
 }
 
-function NavLink({ href, active, children }) {
+function NavLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 ${
+      className={`inline-flex items-center px-1 pt-1 text-sm font-medium border-b-2 transition-all ${
         active
-          ? "border-purple-500 text-white"
-          : "border-transparent text-gray-300 hover:border-gray-300 hover:text-white"
+          ? "border-neon-aqua text-neon-aqua"
+          : "border-transparent text-muted-gray hover:border-neon-purple hover:text-neon-purple"
       }`}
     >
       {children}
@@ -103,12 +103,14 @@ function NavLink({ href, active, children }) {
   )
 }
 
-function MobileNavLink({ href, active, children }) {
+function MobileNavLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
   return (
     <Link
       href={href}
-      className={`block px-3 py-2 rounded-md text-base font-medium ${
-        active ? "bg-gray-900 text-white" : "text-gray-300 hover:bg-gray-700 hover:text-white"
+      className={`block px-3 py-2 rounded-md text-base font-medium transition-all ${
+        active
+          ? "bg-neon-aqua/10 text-neon-aqua border border-neon-aqua/30"
+          : "text-muted-gray hover:bg-neon-purple/10 hover:text-neon-purple"
       }`}
     >
       {children}

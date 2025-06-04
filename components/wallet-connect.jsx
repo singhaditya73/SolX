@@ -19,14 +19,10 @@ export default function WalletConnect({ onConnect, buttonVariant = "default" }) 
 
   if (buttonVariant === "navbar") {
     return (
-      <Button
-        onClick={handleConnect}
-        disabled={connecting}
-        className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
-      >
+      <Button onClick={handleConnect} disabled={connecting} className="space-button">
         {connecting ? (
           <span className="flex items-center">
-            <span className="w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></span>
+            <span className="w-4 h-4 space-spinner mr-2"></span>
             Connecting...
           </span>
         ) : (
@@ -41,14 +37,10 @@ export default function WalletConnect({ onConnect, buttonVariant = "default" }) 
 
   if (buttonVariant === "mobile") {
     return (
-      <Button
-        onClick={handleConnect}
-        disabled={connecting}
-        className="w-full bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
-      >
+      <Button onClick={handleConnect} disabled={connecting} className="w-full space-button">
         {connecting ? (
           <span className="flex items-center">
-            <span className="w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></span>
+            <span className="w-4 h-4 space-spinner mr-2"></span>
             Connecting...
           </span>
         ) : (
@@ -67,11 +59,11 @@ export default function WalletConnect({ onConnect, buttonVariant = "default" }) 
         onClick={handleConnect}
         disabled={connecting}
         size="lg"
-        className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 px-8 py-6 text-lg"
+        className="space-button neon-glow px-8 py-6 text-lg"
       >
         {connecting ? (
           <span className="flex items-center">
-            <span className="w-5 h-5 border-2 border-t-transparent border-white rounded-full animate-spin mr-2"></span>
+            <span className="w-5 h-5 space-spinner mr-2"></span>
             Connecting...
           </span>
         ) : (
