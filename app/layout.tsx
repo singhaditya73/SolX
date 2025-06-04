@@ -2,9 +2,9 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Toaster } from "@/components/ui/toaster"
 import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "sonner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,10 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <div className="min-h-screen bg-gradient-to-b from-black to-gray-950">
+          <div className="min-h-screen bg-gray-950">
             <Navbar />
             {children}
-            <Toaster />
+            <Toaster theme="dark" position="top-right" richColors closeButton />
           </div>
         </ThemeProvider>
       </body>

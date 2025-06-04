@@ -1,42 +1,33 @@
 "use client"
 
-import { useState, Suspense } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Coins, Wallet, Zap } from "lucide-react"
-import { Canvas } from "@react-three/fiber"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Toaster } from "@/components/ui/sonner"
-import HeroScene from "@/components/hero-scene"
-import NightSkyFooter from "@/components/night-sky-footer"
+import { toast } from "sonner"
 import WalletConnect from "@/components/wallet-connect"
 
 export default function Home() {
-  const { toast } = useToast()
   const [connected, setConnected] = useState(false)
   const [walletAddress, setWalletAddress] = useState("")
 
   const connectWallet = async () => {
+    // Placeholder for actual wallet connection logic
     setConnected(true)
     setWalletAddress("8dTJA6wKFfLS8ASMPt11EBCDxXsAQCtxJTGkXpVHvKCd")
-    toast({
-      title: "Wallet Connected",
+    toast.success("Wallet Connected", {
       description: "Successfully connected to Phantom wallet",
     })
   }
 
   return (
     <main className="flex flex-col">
-      <section className="relative h-[80vh] w-full overflow-hidden">
-        <HeroScene />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gray-950">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 mb-4">
               Build on Solana
             </h1>
@@ -65,6 +56,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Section */}
       <section className="py-20 px-4 max-w-7xl mx-auto bg-gray-950">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,17 +96,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20 px-4 bg-gradient-to-b from-[#0a0118] to-[#0f0326] overflow-hidden">
-    
-        <div className="absolute inset-0">
-          <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-            <Suspense fallback={null}>
-              <NightSkyFooter />
-            </Suspense>
-          </Canvas>
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gray-900">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +119,15 @@ export default function Home() {
   )
 }
 
-const FeatureCard = ({ icon, title, description, link, delay }) => (
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  link: string;
+  delay: number;
+}
+
+const FeatureCard = ({ icon, title, description, link, delay }: FeatureCardProps) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
