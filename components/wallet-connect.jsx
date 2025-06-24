@@ -59,16 +59,16 @@ export default function WalletConnect({ onConnect, buttonVariant = "default" }) 
         onClick={handleConnect}
         disabled={connecting}
         size="lg"
-        className="space-button neon-glow px-8 py-6 text-lg"
+        className="space-button neon-glow mt-15 px-8 py-6 text-lg"
       >
         {connecting ? (
           <span className="flex items-center">
-            <span className="w-5 h-5 space-spinner mr-2"></span>
+            <span className="w-5 h-5 space-spinner mr-2 "></span>
             Connecting...
           </span>
         ) : (
           <span className="flex items-center">
-            <Wallet className="mr-2 h-5 w-5" />
+            <Wallet className="mr-2 h-5 w-5 " />
             Connect Wallet
           </span>
         )}

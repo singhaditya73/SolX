@@ -28,9 +28,9 @@ export default function Home() {
       <section className="py-20 px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-4">Build on Solana</h1>
+            <h1 className="text-4xl md:text-6xl font-bold gradient-text mb-20">SolX — Fast, Free, Flexible</h1>
             <p className="text-xl md:text-2xl text-muted-gray mb-8">
-              The fastest blockchain in the world and the fastest growing ecosystem in crypto
+              SolX offers simple tools to send SOL, connect wallets, test with DevNet SOL, and launch custom tokens — everything you need to build on Solana.
             </p>
             {!connected ? (
               <WalletConnect onConnect={connectWallet} />

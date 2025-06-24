@@ -27,7 +27,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <div className="h-8 w-8 bg-gradient-to-r from-neon-aqua to-neon-purple rounded-full mr-2 neon-glow"></div>
-              <span className="font-bold text-xl text-soft-white">Solana DApp</span>
+              <span className="font-bold text-xl text-soft-white">SolX</span>
             </Link>
             <div className="hidden md:ml-10 md:flex md:space-x-8">
               <NavLink href="/" active={isActive("/")}>
