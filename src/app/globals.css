@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* src/app/globals.css */
+body {
+  background-color: #010119;
+  margin: 0;
+  padding: 0;
+}
