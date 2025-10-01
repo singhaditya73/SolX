@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="wrapper">
       {/* This is the parent container. It MUST have position: "relative" */}
-      <div style={{ width: "100%", height: "1000px", position: "relative" }}>
+      <div style={{ width: "100%", height: "1370px", position: "relative" }}>
         <LightRays
           raysOrigin="top-center"
           raysColor="#3333ff"
@@ -28,7 +28,6 @@ export default function Home() {
             priority
             style={{
               objectFit: "cover",
-              // This should align the image to the bottom.
               objectPosition: "bottom", 
             }}
           />
