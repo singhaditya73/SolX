@@ -6,13 +6,27 @@ const handleAnimationComplete = () => {
 };
 export default function SplitTextWrapper() {
   return (
-    <div style={{ width: "50%", height: "100px", position: "relative" }}>
+    <div style={{ width: "80%", height: "100px", position: "relative", textAlign: "center" }}>
       <SplitTextComponent
-        text="Hello, GSAP!cdfsf sgfsfg dfhdghgd dhdgdhgf hghgf hfghfh fhfhfg "
-        className="text-2xl font-semibold text-center text-white"
+        text="SolX: Build Across Chains"
+        className="text-6xl font-semibold text-center text-white"
         delay={100}
         duration={0.6}
         ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
+      <SplitTextComponent
+        text="Easily create tokens, transfer SOL, and run crowdfunding projects across chains."
+        className="text-2xl font-semibold text-center text-white mt-8"
+        delay={30}
+        duration={0.9}
+        ease="elastic.out(1, 0.3)"
         splitType="chars"
         from={{ opacity: 0, y: 40 }}
         to={{ opacity: 1, y: 0 }}
