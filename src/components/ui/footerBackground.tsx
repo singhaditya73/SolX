@@ -8,11 +8,6 @@ export default function FooterBg() {
         alt="Background"
         fill
         priority
-        style={{
-          objectFit: "cover",
-          objectPosition: "bottom",
- 
-        }}
       />
     </div>
   );
