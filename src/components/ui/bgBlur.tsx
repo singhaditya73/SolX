@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function bgBlur() {
   return (
-    <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
+    <div style={{ position: "absolute", inset: 0, zIndex: 1, overflow: "hidden" }}>
       <Image
         src="/images/bgBlur.webp"
         alt="Background"
