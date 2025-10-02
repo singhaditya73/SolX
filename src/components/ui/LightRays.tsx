@@ -1,5 +1,5 @@
 import LightRays from "./../LightRays";
-
+import SplitTextComponent from "../ui/SplitText";
 export default function LightRaysContainer() {
   return (
     <div style={{ width: "100%", height: "600px", position: "relative" }}>
@@ -15,6 +15,7 @@ export default function LightRaysContainer() {
         distortion={0.05}
         className="custom-rays"
       />
+      <div><SplitTextComponent /></div>
     </div>
   );
 }
