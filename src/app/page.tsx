@@ -10,7 +10,7 @@ export default function Home() {
         <ImageBackground />
         <div
           style={{
-            position: "absolute",
+            position: "fixed",
             top: "0%", // vertically center
             left: "50%", // horizontally center
             transform: "translate(-50%, -50%)", // shift back by half width & height
