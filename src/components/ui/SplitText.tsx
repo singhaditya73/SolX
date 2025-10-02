@@ -9,7 +9,7 @@ export default function SplitTextWrapper() {
     <div style={{ width: "80%", height: "100px", position: "relative", textAlign: "center" }}>
       <SplitTextComponent
         text="SolX: Build Across Chains"
-        className="text-6xl font-semibold text-center text-white"
+        className="text-6xl font-bold text-center text-white mt-12"
         delay={100}
         duration={0.6}
         ease="power3.out"

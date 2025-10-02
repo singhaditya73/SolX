@@ -51,7 +51,7 @@ const Navbar = () => {
               animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
               exit={{ clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)" }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute top-[7px] left-1/2 z-[1] flex -translate-x-1/2 justify-between gap-x-[109px] rounded-[9px] bg-[#161616] px-[31.5px] py-[11.5px] font-grotesk-semiBold text-[16px] leading-[17.6px] text-white headerShadow lg:top-[15px] lg:gap-x-[123px] lg:py-[16.2px] lg:text-[17px] lg:leading-[18.5px]"
+              className="absolute top-[7px] left-1/2 z-[1] flex -translate-x-1/2 justify-between gap-x-[109px] rounded-[9px] bg-[#1E1E1E] px-[31.5px] py-[11.5px] font-grotesk-semiBold text-[16px] leading-[17.6px] text-white headerShadow solid lg:top-[15px] lg:gap-x-[123px] lg:py-[16.2px] lg:text-[17px] lg:leading-[18.5px]"
             >
               {/* Left Links */}
               <div className="flex gap-x-[31.5px]">

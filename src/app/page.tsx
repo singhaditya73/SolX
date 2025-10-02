@@ -11,10 +11,19 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, zIndex: 3 }}>
           <LightRaysContainer />
         </div>
-        <div style={{ position: "absolute", inset: 0, zIndex: 2 }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 2, height: "1400px"}}>
           <ImageBackground />
         </div>
-        <div style={{ position: "absolute", inset: 0, zIndex: 1 }}>
+        <div style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 2,
+            
+            width: "2400",
+            height: "1500px",
+            overflow: "hidden",
+            marginTop:"63%"
+          }}>
           <BgBlur />
         </div>
         <div

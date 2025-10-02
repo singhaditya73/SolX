@@ -10,7 +10,8 @@ export default function ImageBackground() {
         priority
         style={{
           objectFit: "cover",
-          objectPosition: "bottom", 
+          objectPosition: "bottom",
+ 
         }}
       />
     </div>
