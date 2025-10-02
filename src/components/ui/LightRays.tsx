@@ -14,8 +14,9 @@ export default function LightRaysContainer() {
         noiseAmount={0.1}
         distortion={0.05}
         className="custom-rays"
+
       />
-      <div><SplitTextComponent /></div>
+      
     </div>
   );
 }
