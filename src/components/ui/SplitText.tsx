@@ -12,7 +12,7 @@ export default function SplitTextWrapper() {
         className="text-6xl font-bold text-center text-white mt-12"
         delay={100}
         duration={0.6}
-        ease="power3.out"
+        ease="bounce.out"
         splitType="chars"
         from={{ opacity: 0, y: 40 }}
         to={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export default function SplitTextWrapper() {
         className="text-2xl font-semibold text-center text-white mt-8"
         delay={30}
         duration={0.9}
-        ease="elastic.out(1, 0.3)"
+        ease="bounce.out"
         splitType="chars"
         from={{ opacity: 0, y: 40 }}
         to={{ opacity: 1, y: 0 }}

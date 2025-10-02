@@ -12,6 +12,7 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, zIndex: 3 }}>
           <LightRaysContainer />
         </div>
+        
         <div
           style={{
             position: "absolute",
