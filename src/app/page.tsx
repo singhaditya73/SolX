@@ -18,8 +18,6 @@ export default function Home() {
           distortion={0.05}
           className="custom-rays"
         ></LightRays>
-
-        {/* This is the image container. It uses inset to fill the parent. */}
         <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
           <Image
             src="/images/finalHeroImage.webp"
