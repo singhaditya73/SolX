@@ -3,6 +3,7 @@ import ImageBackground from "@/components/ui/ImageBackground";
 import LightRaysContainer from "@/components/ui/LightRays";
 import SplitTextWrapper from "@/components/ui/SplitText";
 import BgBlur from "@/components/ui/bgBlur";
+import FooterBg from "@/components/ui/footerBackground";
 
 export default function Home() {
   return (
@@ -11,19 +12,43 @@ export default function Home() {
         <div style={{ position: "absolute", inset: 0, zIndex: 3 }}>
           <LightRaysContainer />
         </div>
-        <div style={{ position: "absolute", inset: 0, zIndex: 2, height: "1400px"}}>
-          <ImageBackground />
-        </div>
-        <div style={{
+        <div
+          style={{
             position: "absolute",
             inset: 0,
             zIndex: 2,
-            
-            width: "2400",
-            height: "1500px",
+            height: "1400px",
+          }}
+        >
+          <ImageBackground />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            top: "50%",
+            zIndex: 2,
+            width: "100%",
+            height: "100%",
             overflow: "hidden",
-            marginTop:"63%"
-          }}>
+            marginTop: "95%",
+          }}
+        >
+          <FooterBg />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            zIndex: 2,
+
+            width: "2400",
+            height: "2000px",
+            overflow: "hidden",
+            marginTop: "50%",
+          }}
+        >
           <BgBlur />
         </div>
         <div
