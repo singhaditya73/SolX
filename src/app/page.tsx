@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="wrapper">
       <div style={{ width: "100%", height: "1370px", position: "relative" }}>
-        <div style={{ position: "absolute", inset: 0, zIndex: 3 }}>
+        <div style={{ position: "absolute", inset: 0, zIndex: 3, mixBlendMode: "screen",height:"100%", width:"100%" }}>
           <LightRaysContainer />
         </div>
         
@@ -18,7 +18,10 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             zIndex: 2,
-            height: "1400px",
+            height: "100%",
+            width: "100%",
+            marginTop: "5%",
+            
           }}
         >
           <ImageBackground />
@@ -28,12 +31,12 @@ export default function Home() {
             position: "absolute",
             left: 0,
             right: 0,
-            top: "50%",
+            top: "52%",
             zIndex: 2,
             width: "100%",
             height: "100%",
             overflow: "hidden",
-            marginTop: "85%",
+            marginTop: "90%",
           }}
         >
           <FooterBg />
@@ -58,7 +61,7 @@ export default function Home() {
             top: "0%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            zIndex: 6,
+            zIndex: 7,
             width: "50%",
             textAlign: "center",
           }}

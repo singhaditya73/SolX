@@ -11,7 +11,6 @@ export default function ImageBackground() {
         style={{
           objectFit: "cover",
           objectPosition: "bottom",
- 
         }}
       />
     </div>
