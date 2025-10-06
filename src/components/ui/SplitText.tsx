@@ -6,7 +6,14 @@ const handleAnimationComplete = () => {
 };
 export default function SplitTextWrapper() {
   return (
-    <div style={{ width: "80%", height: "100px", position: "relative", textAlign: "center" }}>
+    <div
+      style={{
+        width: "80%",
+        height: "100px",
+        position: "relative",
+        textAlign: "center",
+      }}
+    >
       <SplitTextComponent
         text="SolX: Build Across Chains"
         className="text-6xl font-bold text-center text-white mt-12"

@@ -32,8 +32,7 @@ export default function Home() {
             marginLeft: "5%",
             marginRight: "5%",
             borderRadius: "20px",
-            
-            
+
             marginTop: "65%",
           }}
         ></div>
